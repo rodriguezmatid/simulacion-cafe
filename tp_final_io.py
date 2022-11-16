@@ -96,8 +96,8 @@ with open('./sab_10am.csv', 'r') as sab_10am:
        consumo_co = np.random.uniform(1800,4500)
        linea.append(consumo_co)
        ct_co_sab_am = consumo_ta + ct_co_sab_am
-       
-       
+
+
 
    arribos_totales_sab_am = ta_sab_10 + consume_sab_10
 
@@ -158,7 +158,7 @@ utilidad_pm = ct_pm -costos_totales_pm
 ganancia_promedio_am = utilidad_am/(arribos_totales_lun_am + arribos_totales_sab_am)
 ganancia_promedio_pm = utilidad_pm/(arribos_totales_lun_pm + arribos_totales_sab_pm)
 ganancia_promedio_sab = utilidad_sabado/(arribos_totales_sab_am + arribos_totales_sab_pm)
-ganancia_promedio_lun = utilidad_lunes/(arribos_totales_lun_am + arribos_totales_lun_pm) 
+ganancia_promedio_lun = utilidad_lunes/(arribos_totales_lun_am + arribos_totales_lun_pm)
 
 print("ganancia_promedio_am",ganancia_promedio_am)
 print("ganancia_promedio_pm",ganancia_promedio_pm)
@@ -189,7 +189,7 @@ std_sab_baja = np.std(samples)
 print('Promedio: ' + str(mean_sab_baja))
 print('Desvío estandar: ' + str(std_sab_baja))
 
-plt.bar(samples,height)
+# plt.bar(samples,height)
 plt.show()
 
 ## SIMULACIÓN TIEMPO ENTRE ARRIBOS TOTALES PARA SABADO
@@ -261,7 +261,7 @@ import matplotlib.pyplot as plt
 
 experimentos = 100
 arribos = 20
-param =  #Sale del print anterior que muestra arribos en 1 hora
+param = 24  #Sale del print anterior que muestra arribos en 1 hora
 samples = np.zeros((arribos, experimentos))
 
 for j in range(0, experimentos):
